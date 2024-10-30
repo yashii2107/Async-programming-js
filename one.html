@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asyncronous programming in js</h1>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    const changeText = function(){
+        document.querySelector('h1').
+        innerHTML = "we have learnt some part";
+    }
+    const changeMe = setTimeout(changeText, 2000); //here we are giving reference of function we can also directly write function.
+    const  buttons= document.querySelector('#stop');
+    buttons.addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log('stopped')
+    })
+
+</script>
+</html>
